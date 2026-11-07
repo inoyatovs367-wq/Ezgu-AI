@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EzguTech AI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="chat-container">
+        <!-- Header qismi -->
+        <header class="chat-header">
+            <h1 class="logo">EzguTech AI</h1>
+            
+            <div class="header-right">
+                <!-- Valyuta kursi paneli -->
+                <div id="currencyBoard" class="currency-board">
+                    <span id="usdRate">USD/UZS: Yuklanmoqda...</span> | 
+                    <span id="eurRate">EUR/UZS: Yuklanmoqda...</span>
+                </div>
+
+                <!-- Brendlar tugmasi va Dropdown menyusi -->
+                <div class="brands-dropdown-container">
+                    <button id="brandsToggleBtn" class="brands-btn">
+                        <span>🏷️ Brendlar</span>
+                        <span class="arrow">▼</span>
+                    </button>
+                    
+                    <div id="brandsDropdownMenu" class="brands-menu">
+                        <div class="brand-search-box">
+                            <input type="text" id="brandSearchInput" placeholder="Brendni qidirish...">
+                        </div>
+                        <div class="brand-options-list">
+                            <div class="brand-option" data-brand="Apple">Apple</div>
+                            <div class="brand-option" data-brand="Redmi">Redmi</div>
+                            <div class="brand-option" data-brand="Samsung">Samsung</div>
+                            <div class="brand-option" data-brand="Infinix">Infinix</div>
+                            <div class="brand-option" data-brand="Honor">Honor</div>
+                            <div class="brand-option" data-brand="Tecno">Tecno</div>
+                            <div class="brand-option" data-brand="ZTE">ZTE</div>
+                            <div class="brand-option" data-brand="Aksessuar">Aksessuar</div>
+                            <div class="brand-option" data-brand="Ray Ban AI">Ray Ban AI</div>
+                            <div class="brand-option" data-brand="DYSON">DYSON</div>
+                            <div class="brand-option" data-brand="Knopka telefon (Novey Nokia)">Knopka telefon (Novey Nokia)</div>
+                            <div class="brand-option" data-brand="Noma'lum / Mix">Noma'lum / Mix</div>
+                            <div class="brand-option" data-brand="JBL">JBL</div>
+                            <div class="brand-option" data-brand="BMW">BMW</div>
+                            <div class="brand-option" data-brand="Sandisk">Sandisk</div>
+                            <div class="brand-option" data-brand="Hoco">Hoco</div>
+                            <div class="brand-option" data-brand="Borofone">Borofone</div>
+                            <div class="brand-option" data-brand="Huawei">Huawei</div>
+                            <div class="brand-option" data-brand="Epson">Epson</div>
+                            <div class="brand-option" data-brand="Iconix">Iconix</div>
+                            <div class="brand-option" data-brand="Acer">Acer</div>
+                            <div class="brand-option" data-brand="Yesido">Yesido</div>
+                            <div class="brand-option" data-brand="Xiaomi">Xiaomi</div>
+                            <div class="brand-option" data-brand="Wiwu">Wiwu</div>
+                            <div class="brand-option" data-brand="Apple (MagSafe aksessuar)">Apple (MagSafe aksessuar)</div>
+                            <div class="brand-option" data-brand="Sony">Sony</div>
+                            <div class="brand-option" data-brand="Youwei">Youwei</div>
+                            <div class="brand-option" data-brand="Earldom">Earldom</div>
+                            <div class="brand-option" data-brand="Xiaomi/Ezviz (aralash)">Xiaomi/Ezviz (aralash)</div>
+                            <div class="brand-option" data-brand="Saramonic">Saramonic</div>
+                            <div class="brand-option" data-brand="Tripod (mix)">Tripod (mix)</div>
+                            <div class="brand-option" data-brand="Geemy">Geemy</div>
+                            <div class="brand-option" data-brand="Jmary">Jmary</div>
+                            <div class="brand-option" data-brand="VGR">VGR</div>
+                            <div class="brand-option" data-brand="Terminator">Terminator</div>
+                            <div class="brand-option" data-brand="Mozer">Mozer</div>
+                            <div class="brand-option" data-brand="Nowax">Nowax</div>
+                            <div class="brand-option" data-brand="Areon">Areon</div>
+                            <div class="brand-option" data-brand="Ezviz">Ezviz</div>
+                            <div class="brand-option" data-brand="Holdmay">Holdmay</div>
+                            <div class="brand-option" data-brand="CMF (Nothing)">CMF (Nothing)</div>
+                            <div class="brand-option" data-brand="Keephone">Keephone</div>
+                            <div class="brand-option" data-brand="Baseus">Baseus</div>
+                            <div class="brand-option" data-brand="Guess">Guess</div>
+                            <div class="brand-option" data-brand="Amazfit">Amazfit</div>
+                            <div class="brand-option" data-brand="Holabox">Holabox</div>
+                            <div class="brand-option" data-brand="PUBG (litsenziyasiz aksessuar)">PUBG (litsenziyasiz aksessuar)</div>
+                            <div class="brand-option" data-brand="Remax">Remax</div>
+                            <div class="brand-option" data-brand="WKN">WKN</div>
+                            <div class="brand-option" data-brand="Lenyes">Lenyes</div>
+                            <div class="brand-option" data-brand="Godes">Godes</div>
+                            <div class="brand-option" data-brand="Panasonic">Panasonic</div>
+                            <div class="brand-option" data-brand="Dyson">Dyson</div>
+                            <div class="brand-option" data-brand="Barbara">Barbara</div>
+                            <div class="brand-option" data-brand="Pitaka">Pitaka</div>
+                            <div class="brand-option" data-brand="Joyroom">Joyroom</div>
+                            <div class="brand-option" data-brand="Nike">Nike</div>
+                            <div class="brand-option" data-brand="ZQS">ZQS</div>
+                            <div class="brand-option" data-brand="Awei">Awei</div>
+                            <div class="brand-option" data-brand="KSC">KSC</div>
+                            <div class="brand-option" data-brand="Anker">Anker</div>
+                            <div class="brand-option" data-brand="Ailiang">Ailiang</div>
+                            <div class="brand-option" data-brand="Celebrat">Celebrat</div>
+                            <div class="brand-option" data-brand="DJI">DJI</div>
+                            <div class="brand-option" data-brand="Hollyland">Hollyland</div>
+                            <div class="brand-option" data-brand="Porodo">Porodo</div>
+                            <div class="brand-option" data-brand="Haylou">Haylou</div>
+                            <div class="brand-option" data-brand="Soonbox">Soonbox</div>
+                            <div class="brand-option" data-brand="Mibro">Mibro</div>
+                            <div class="brand-option" data-brand="Proda">Proda</div>
+                            <div class="brand-option" data-brand="Sonifer">Sonifer</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Xabarlar tarixi -->
+        <div id="chatMessages" class="chat-messages"></div>
+
+        <!-- Tezkor tugmalar (Chips) -->
+        <div class="chat-chips">
+            <button class="chip-btn" data-query="Arzon telefonlar">Arzon telefonlar</button>
+            <button class="chip-btn" data-query="Apple">Apple</button>
+            <button class="chip-btn" data-query="Samsung">Samsung</button>
+        </div>
+
+        <!-- Pastkiinput qismi -->
+        <div class="chat-input-area">
+            <input type="text" id="chatInput" placeholder="Xabar yozing...">
+            <button id="sendBtn">➤</button>
+        </div>
+    </div>
+
+    <script src="app.js?v=2"></script>
+</body>
+</html>
